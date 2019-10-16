@@ -1,5 +1,4 @@
 function [electrode_regions,distance_matrix,atlas_info] = mniCoord2Label(coords_filepath,atlas_name)
-% labels = mniCoord2Label(coords_csv)
 % takes in a csv files where the first 3 columns are (x,y,z) MNI
 % coordinates, outputs the AAL atlas names for each coordinate. Uses AAL
 % 116 as the default.
@@ -26,10 +25,10 @@ function [electrode_regions,distance_matrix,atlas_info] = mniCoord2Label(coords_
 %  
 % Updates:
 %   3/22/2019 - added nearest neighbor output for zero labels
-% 
 
-%coords_filepath = 'electrode_coordinates_mni.csv'
-%atlas_filepath = 'AAL116.nii'
+% % files for testing
+% coords_filepath = 'electrode_coordinates_mni.csv'
+% atlas_filepath = 'AAL116.nii'
 
 % read in default AAL116 if not specified
 if ~exist('atlas_name')

@@ -1,4 +1,7 @@
 function [my_sphere,coords] = gen_sphere(radius)
+% generates a 3D matrix that labels voxels as inside our outside a given
+% radius.
+%
     dim = 2*radius + 1; % size of box containing sphere
     mid = radius + 1; % midpoint of the box ([mid mid mid] is centroid)
     my_sphere = zeros(dim,dim,dim); % build box
