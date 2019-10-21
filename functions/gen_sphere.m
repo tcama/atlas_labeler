@@ -7,7 +7,7 @@ function [my_sphere,coords] = gen_sphere(radius)
     my_sphere = zeros(dim,dim,dim); % build box
     for i = 1:numel(my_sphere) % loop through each location in box
         [X,Y,Z] = ind2sub([dim,dim,dim],i); % get coordinates
-        D = dist([mid mid mid; X Y Z]'); % distance from centroid
+        D = pdist([mid mid mid; X Y Z]', 'euclidean'); % distance from centroid
         if D <= radius % if less than radius, put in box
             my_sphere(i) = 1;
         end

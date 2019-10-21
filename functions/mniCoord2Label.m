@@ -52,6 +52,6 @@ electrode_regions = [atlas_info{1,2}(ib) num2cell(mni_labels') num2cell(NN_flag)
 
 % get distance matrix for all electrodes and atlas ROIs
 centroid = atlas_centroids(atlas_filepath);
-distance_matrix = dist([centroid; mni_coords]');
+distance_matrix = pdist([centroid; mni_coords]', 'euclidean');
 
 return;
